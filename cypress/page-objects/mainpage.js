@@ -14,6 +14,12 @@ export class MainPage {
 
     }
 
+    clicarShiftingContent(){
+
+        cy.get(':nth-child(39) > a').click()
+
+    }
+
     
 }
 

@@ -2,25 +2,25 @@
 
 
 import {MainPage}  from "../page-objects/mainpage"
-import {} from "../page-objects/"
-import {} from "../page-objects/"
+import {ShiftingContent} from "../page-objects/shiftingcontent"
+import {MenuElement} from "../page-objects/menuelement"
 
 
-describe('Pruebas de login', () => {
+describe('Elementos de una tabla', () => {
 
     const mainPage = new MainPage()
-    const  = new ()
-    const s = new ()
+    const shiftingContent = new ShiftingContent()
+    const menuElement = new MenuElement()
 
     beforeEach(() => {
         mainPage.visitarMainPage()
         mainPage.clicarShiftingContent()
-      
+        shiftingContent.clicarEjemplo1()
     })
     
-    it('Comprobamos el nùmero de filas (registros)', () => {
-        cy.get('table tbody tr').should('have.length', 5);
-      });
+    it('Comprobamos los elementos de la tabla del ejemplo 1', () => {      
+        menuElement.comprobarElement('5')        
+    })
 
 })
 
